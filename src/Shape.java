@@ -95,7 +95,23 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public int compareTo(Shape s)
 	{
-		// TODO: complete this...
+		if (this.getArea() > s.getArea()) {
+			return 1;
+		}
+		else if (this.getArea() < s.getArea()) {
+			return -1;
+		}
+		else {
+			if (this.getPerimeter() > s.getPerimeter()) {
+				return 1;
+			}
+			else if (this.getPerimeter() < s.getPerimeter()) {
+				return -1;
+			}
+			else {
+				return 0;
+			}
+		}
 	}
 
 	/**
