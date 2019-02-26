@@ -42,7 +42,24 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesDefaultTest()
 	{
-		// TODO: complete this...
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
+		sorter.sortShapes();
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(0), b);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(1), d);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(2), a);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(3), c);
+		
 	}
 
 	/**
@@ -51,8 +68,24 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesAreaTest()
 	{
-		// TODO: complete this...
-	}
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
+		sorter.sortShapes(new ShapeAreaComparator());
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(0), b);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(1), d);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(2), a);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(3), c);	
+		}
 
 	/**
 	 * Tests sorting by perimeter ordering.
@@ -60,8 +93,24 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesPerimeterTest()
 	{
-		// TODO: complete this...
-	}
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Rectangle("test4", 1.5, 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
+		sorter.sortShapes(new ShapePerimeterComparator());
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(0), d);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(1), b);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(2), a);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(3), c);	
+		}
 
 	/**
 	 * Tests the toString.

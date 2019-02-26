@@ -20,12 +20,10 @@ public class Driver
 
 		// Create several shapes:
 		Shape s1 = new EquilateralTriangle("A", 4.0);
-		Shape s2 = new EquilateralTriangle("AA", 5.0);
-		System.out.println(s2);
-		/*Shape s2 = new Rectangle("B", 4.0, 1.0);
+		Shape s2 = new Rectangle("B", 4.0, 1.0);
 		Shape s3 = new Rectangle("C", 3.0, 4.0);
 		Shape s4 = new Rectangle("D", 16.0, 1.0);
-		Shape s5 = new Rectangle("A", 8.0, 2.0);
+		Shape s5 = new Square("A", 8.0);
 
 		// Add all to sorter:
 		sorter.addShape(s1);
@@ -51,6 +49,6 @@ public class Driver
 		// Sort by perimeter and print:
 		sorter.sortShapes(new ShapePerimeterComparator());
 		System.out.println("###");
-		System.out.println(sorter); */
+		System.out.println(sorter); 
 	}
 }
