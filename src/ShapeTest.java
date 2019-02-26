@@ -110,6 +110,17 @@ public class ShapeTest
 	{
 		Shape s1 = new EquilateralTriangle("A", 3.0);
 		Assert.assertEquals("Shape toString incorrect", "EquilateralTriangle	 ID = A	 area = 3.897	 perimeter = 9.000", s1.toString());
+		Shape s2 = new Rectangle("B", 4.0, 1.0);
+		Assert.assertEquals("Shape toString incorrect", "Rectangle	 ID = B	 area = 4.000	 perimeter = 10.000", s2.toString());
+		Shape s5 = new Square("A", 8.0);
+		Assert.assertEquals("Shape toString incorrect", "Square	 ID = A	 area = 64.000	 perimeter = 32.000", s5.toString());
+		Shape s4 = new Ellipse("D", 16.0, 1.0);
+		Assert.assertEquals("Shape toString incorrect", "Ellipse	 ID = D	 area = 50.265	 perimeter = 71.225", s4.toString());
+		Shape s3 = new Trapezoid("C", 3.0, 3.0, 5.0, 7.0);
+		Assert.assertEquals("Shape toString incorrect", "Trapezoid	 ID = C	 area = 16.971	 perimeter = 18.000", s3.toString());
+		Shape s6 = new Circle("E", 16.0);
+		Assert.assertEquals("Shape toString incorrect", "Circle	 ID = E	 area = 804.248	 perimeter = 100.531", s6.toString());
+
 	}
 
 	//==================================================================================================================
@@ -180,6 +191,11 @@ public class ShapeTest
 		Shape sqr2 = new Square("S2", 4.0);
 		Assert.assertEquals("Shape CompareTo gave incorrect ordering", -1 ,rect2.compareTo(sqr2));
 		Assert.assertEquals("Shape CompareTo gave incorrect ordering", 1 ,sqr2.compareTo(rect2));
+
+		Shape rect3 = new Rectangle("R3", 2.0,8.0);
+		Shape rect4 = new Rectangle("R4", 4.0,4.0);
+		Assert.assertEquals("Shape compareTo gave incorrect ordering", 1, rect3.compareTo(rect4));
+		Assert.assertEquals("Shape compareTo gave incorrect ordering", -1, rect4.compareTo(rect3));
 
     }
 }

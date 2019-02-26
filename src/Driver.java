@@ -21,9 +21,10 @@ public class Driver
 		// Create several shapes:
 		Shape s1 = new EquilateralTriangle("A", 3.0);
 		Shape s2 = new Rectangle("B", 4.0, 1.0);
-		Shape s3 = new Rectangle("C", 3.0, 4.0);
-		Shape s4 = new Rectangle("D", 16.0, 1.0);
+		Shape s3 = new Trapezoid("C", 3.0, 3.0, 5.0, 7.0);
+		Shape s4 = new Ellipse("D", 16.0, 1.0);
 		Shape s5 = new Square("A", 8.0);
+		Shape s6 = new Circle("E", 16.0);
 
 		// Add all to sorter:
 		sorter.addShape(s1);
@@ -31,6 +32,7 @@ public class Driver
 		sorter.addShape(s4);
 		sorter.addShape(s3);
 		sorter.addShape(s5);
+		sorter.addShape(s6);
 
 		// Print unsorted:
 		System.out.println("###");
