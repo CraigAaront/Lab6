@@ -19,7 +19,7 @@ public class Driver
 		ShapeSorter sorter = new ShapeSorter();
 
 		// Create several shapes:
-		Shape s1 = new EquilateralTriangle("A", 4.0);
+		Shape s1 = new EquilateralTriangle("A", 3.0);
 		Shape s2 = new Rectangle("B", 4.0, 1.0);
 		Shape s3 = new Rectangle("C", 3.0, 4.0);
 		Shape s4 = new Rectangle("D", 16.0, 1.0);
