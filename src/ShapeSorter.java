@@ -70,7 +70,7 @@ public class ShapeSorter
 	{
 		String result = "";
 		for (int i = 0; i < shapes.size(); i++) {
-			result += shapes.get(i).toString() + "\t";
+			result += shapes.get(i).toString();
 		}
 		return result;
 	}

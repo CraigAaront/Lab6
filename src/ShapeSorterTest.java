@@ -123,7 +123,8 @@ public class ShapeSorterTest
 	      ShapeSorter sorter = new ShapeSorter();
 	      sorter.addShape(a);
 	      sorter.addShape(b);
-	      Assert.assertEquals("ShapeSorter toString is incorrect", "Rectangle:\t ID = test\t area = 9.000\t perimeter = 12.000"+ "\t" + "EquilateralTriangle:\t ID = test2\t area = 6.928\t perimeter = 12.000" +"\t", sorter.toString());
+	      Assert.assertEquals("ShapeSorter toString is incorrect", "Rectangle:\t ID = test\t area = 9.000\t perimeter = 12.000"
+	      + "EquilateralTriangle:\t ID = test2\t area = 6.928\t perimeter = 12.000", sorter.toString());
 	      
 	}
 }
