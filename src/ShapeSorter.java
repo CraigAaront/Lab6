@@ -68,11 +68,11 @@ public class ShapeSorter
 	@Override
 	public String toString()
 	{
-		ArrayList<String> shapeArray = new ArrayList<String>();
+		String result = "";
 		for (int i = 0; i < shapes.size(); i++) {
-			shapeArray.add(shapes.get(i).toString());
+			result += shapes.get(i).toString() + "\t";
 		}
-		return shapeArray.toString();
+		return result;
 	}
 
 }
