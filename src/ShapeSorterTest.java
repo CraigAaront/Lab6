@@ -107,8 +107,8 @@ public class ShapeSorterTest
 		
 		sorter.sortShapes(new ShapePerimeterComparator());
 		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(0), d);
-		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(1), b);
-		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(2), a);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(1), a);
+		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(2), b);
 		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(3), c);	
 		}
 
@@ -118,6 +118,12 @@ public class ShapeSorterTest
 	@Test
 	public void ToStringTest()
 	{
-		// TODO: complete this...
+	      Shape a = new Rectangle("test", 3, 3);
+	      Shape b = new EquilateralTriangle("test2", 4);
+	      ShapeSorter sorter = new ShapeSorter();
+	      sorter.addShape(a);
+	      sorter.addShape(b);
+	      Assert.assertEquals("ShapeSorter toString is incorrect", "Rectangle\t ID = test\t area = 9.000\t perimeter = 12.000"+ "\t" + "EquilateralTriangle\t ID = test2\t area = 6.928\t perimeter = 12.000" +"\t", sorter.toString());
+	      
 	}
 }

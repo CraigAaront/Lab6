@@ -16,7 +16,7 @@ public class Driver
      */
 	public static void main(String[] args)
 	{
-		ShapeSorter sorter = new ShapeSorter();
+	    /*ShapeSorter sorter = new ShapeSorter();
 
 		// Create several shapes:
 		Shape s1 = new EquilateralTriangle("A", 3.0);
@@ -33,7 +33,12 @@ public class Driver
 		sorter.addShape(s3);
 		sorter.addShape(s5);
 		sorter.addShape(s6);
-
+        */
+        Shape a = new Rectangle("test", 3, 3);
+        Shape b = new EquilateralTriangle("test2", 4);
+        ShapeSorter sorter = new ShapeSorter();
+        sorter.addShape(a);
+        sorter.addShape(b);
 		// Print unsorted:
 		System.out.println("###");
 		System.out.println(sorter);
